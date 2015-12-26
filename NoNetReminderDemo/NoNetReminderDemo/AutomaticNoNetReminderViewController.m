@@ -8,7 +8,7 @@
 
 #import "AutomaticNoNetReminderViewController.h"
 #import "NoNetRemindView.h"
-@interface AutomaticNoNetReminderViewController ()
+@interface AutomaticNoNetReminderViewController ()<NoNetRemindViewDelegate>
 
 @property(nonatomic,strong)NoNetRemindView *remindView;
 
@@ -20,6 +20,11 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
      self.remindView = [[NoNetRemindView alloc] initWithFrame:self.view.frame showInView:self.view];
+    self.remindView.delegate = self;
+}
+-(void)noNetRemindView:(NoNetRemindView *)noNetRemindView isInternetReachable:(NoNetRemindViewInternetState)InternetState
+{
+    
 }
 
 - (void)didReceiveMemoryWarning {
