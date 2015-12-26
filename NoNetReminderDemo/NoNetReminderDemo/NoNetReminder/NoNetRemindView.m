@@ -76,7 +76,14 @@ static CGFloat reloadButtonHeight = 30;
     self.reach = [Reachability reachabilityForInternetConnection];
     
     if (![self.reach isReachable]) {
+        if ([self.delegate respondsToSelector:@selector(noNetRemindView:isInternetReachable:)]) {
+            [self.delegate noNetRemindView:self isInternetReachable:NoNetRemindViewInternetUnreahable];
+        }
         [self showInView:view];
+    }else{
+        if ([self.delegate respondsToSelector:@selector(noNetRemindView:isInternetReachable:)]) {
+            [self.delegate noNetRemindView:self isInternetReachable:NoNetRemindViewInternetReachable];
+        }
     }
 
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -91,10 +98,14 @@ static CGFloat reloadButtonHeight = 30;
     Reachability *reach = [note object];
     if (reach == self.reach) {
         if ([reach isReachable]) {
-            NSLog(@"网络可用");
+            if ([self.delegate respondsToSelector:@selector(noNetRemindView:isInternetReachable:)]) {
+                [self.delegate noNetRemindView:self isInternetReachable:NoNetRemindViewInternetReachable];
+            }
             [self dismiss];
         }else{
-            NSLog(@"网络不可用");
+            if ([self.delegate respondsToSelector:@selector(noNetRemindView:isInternetReachable:)]) {
+                [self.delegate noNetRemindView:self isInternetReachable:NoNetRemindViewInternetUnreahable];
+            }
             [self showInView:self.supView];
         }
     }

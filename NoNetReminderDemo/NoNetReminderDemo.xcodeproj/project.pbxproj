@@ -15,6 +15,8 @@
 		6303A7BA1C2CF5AE00DDF186 /* NoNetReminderDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6303A7B91C2CF5AE00DDF186 /* NoNetReminderDemoTests.m */; };
 		6303A7C51C2CF5AE00DDF186 /* NoNetReminderDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6303A7C41C2CF5AE00DDF186 /* NoNetReminderDemoUITests.m */; };
 		6303A7D51C2CF6CA00DDF186 /* NoNetRemindView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6303A7D41C2CF6CA00DDF186 /* NoNetRemindView.m */; };
+		631A68281C2ED1DA00BC20E2 /* ManuaNoNetReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631A68271C2ED1DA00BC20E2 /* ManuaNoNetReminderViewController.m */; };
+		631A682B1C2ED20F00BC20E2 /* AutomaticNoNetReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631A682A1C2ED20F00BC20E2 /* AutomaticNoNetReminderViewController.m */; };
 		63A320D31C2E856700DCA5B4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A320D21C2E856700DCA5B4 /* SystemConfiguration.framework */; };
 		63A320D71C2E85F700DCA5B4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A320D61C2E85F700DCA5B4 /* Reachability.m */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,10 @@
 		6303A7C61C2CF5AE00DDF186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6303A7D31C2CF6CA00DDF186 /* NoNetRemindView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoNetRemindView.h; sourceTree = "<group>"; };
 		6303A7D41C2CF6CA00DDF186 /* NoNetRemindView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoNetRemindView.m; sourceTree = "<group>"; };
+		631A68261C2ED1DA00BC20E2 /* ManuaNoNetReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManuaNoNetReminderViewController.h; sourceTree = "<group>"; };
+		631A68271C2ED1DA00BC20E2 /* ManuaNoNetReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManuaNoNetReminderViewController.m; sourceTree = "<group>"; };
+		631A68291C2ED20F00BC20E2 /* AutomaticNoNetReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutomaticNoNetReminderViewController.h; sourceTree = "<group>"; };
+		631A682A1C2ED20F00BC20E2 /* AutomaticNoNetReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutomaticNoNetReminderViewController.m; sourceTree = "<group>"; };
 		63A320D21C2E856700DCA5B4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		63A320D51C2E85F700DCA5B4 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		63A320D61C2E85F700DCA5B4 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -114,6 +120,10 @@
 				6303A7A31C2CF5AE00DDF186 /* AppDelegate.m */,
 				6303A7A51C2CF5AE00DDF186 /* ViewController.h */,
 				6303A7A61C2CF5AE00DDF186 /* ViewController.m */,
+				631A68261C2ED1DA00BC20E2 /* ManuaNoNetReminderViewController.h */,
+				631A68271C2ED1DA00BC20E2 /* ManuaNoNetReminderViewController.m */,
+				631A68291C2ED20F00BC20E2 /* AutomaticNoNetReminderViewController.h */,
+				631A682A1C2ED20F00BC20E2 /* AutomaticNoNetReminderViewController.m */,
 				6303A7AB1C2CF5AE00DDF186 /* Assets.xcassets */,
 				6303A7AD1C2CF5AE00DDF186 /* LaunchScreen.storyboard */,
 				6303A7B01C2CF5AE00DDF186 /* Info.plist */,
@@ -296,8 +306,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				631A68281C2ED1DA00BC20E2 /* ManuaNoNetReminderViewController.m in Sources */,
 				6303A7A71C2CF5AE00DDF186 /* ViewController.m in Sources */,
 				6303A7A41C2CF5AE00DDF186 /* AppDelegate.m in Sources */,
+				631A682B1C2ED20F00BC20E2 /* AutomaticNoNetReminderViewController.m in Sources */,
 				6303A7D51C2CF6CA00DDF186 /* NoNetRemindView.m in Sources */,
 				6303A7A11C2CF5AE00DDF186 /* main.m in Sources */,
 				63A320D71C2E85F700DCA5B4 /* Reachability.m in Sources */,

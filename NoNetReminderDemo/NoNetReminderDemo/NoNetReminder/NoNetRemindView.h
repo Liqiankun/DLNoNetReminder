@@ -8,7 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum
+{
+    NoNetRemindViewInternetUnreahable,
+    NoNetRemindViewInternetReachable,
+}  NoNetRemindViewInternetState;
 
+@class NoNetRemindView;
+@protocol NoNetRemindViewDelegate <NSObject>
+
+-(void)noNetRemindView:(NoNetRemindView*)noNetRemindView isInternetReachable:(NoNetRemindViewInternetState)InternetState;
+
+@end
 
 @interface NoNetRemindView : UIView
 
@@ -24,7 +35,8 @@
 /** 点击reloadButton的block */
 @property(nonatomic,copy) void (^reloadButtonClickBlock)();
 
-
+/** NoNetRemindViewDelegate */
+@property(nonatomic,assign) id<NoNetRemindViewDelegate> delegate;
 
 /** 初始化方法 */
 -(id)initWithFrame:(CGRect)frame reloadBlock:(void (^)())block;
