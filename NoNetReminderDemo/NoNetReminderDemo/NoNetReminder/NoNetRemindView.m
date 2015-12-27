@@ -84,6 +84,7 @@ static CGFloat reloadButtonHeight = 30;
         if ([self.delegate respondsToSelector:@selector(noNetRemindView:isInternetReachable:)]) {
             [self.delegate noNetRemindView:self isInternetReachable:NoNetRemindViewInternetReachable];
         }
+
     }
 
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -109,6 +110,13 @@ static CGFloat reloadButtonHeight = 30;
             [self showInView:self.supView];
         }
     }
+   
+   
+}
+
+-(void)stopNitifiter
+{
+    [self.reach stopNotifier];
 }
 
 -(void)setRemindString:(NSString *)remindString

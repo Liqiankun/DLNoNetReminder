@@ -50,5 +50,6 @@ typedef enum
 /** 从父视图上删除 */
 -(void)dismiss;
 
+-(void)stopNitifiter;
 @end
 

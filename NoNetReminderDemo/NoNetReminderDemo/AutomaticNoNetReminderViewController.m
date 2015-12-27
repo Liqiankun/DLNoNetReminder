@@ -11,15 +11,20 @@
 @interface AutomaticNoNetReminderViewController ()<NoNetRemindViewDelegate>
 
 @property(nonatomic,strong)NoNetRemindView *remindView;
-
+@property(nonatomic,strong)UILabel *internetLabel;
 @end
 
 @implementation AutomaticNoNetReminderViewController
 
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [self.remindView stopNitifiter];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-     self.remindView = [[NoNetRemindView alloc] initWithFrame:self.view.frame showInView:self.view];
+    self.remindView = [[NoNetRemindView alloc] initWithFrame:self.view.frame showInView:self.view];
     self.remindView.delegate = self;
 }
 -(void)noNetRemindView:(NoNetRemindView *)noNetRemindView isInternetReachable:(NoNetRemindViewInternetState)InternetState
@@ -31,6 +36,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation
