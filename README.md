@@ -10,6 +10,7 @@ Features
 - [x] Be showed automatically
 - [x] Listen the internet state
 - [x] Customize appearance
+
  How to use
 ====================
 Darg `NoNetReminder` folder to your project. Than `import "NoNetReminder.h"`.<br>
