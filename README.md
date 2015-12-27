@@ -1,6 +1,6 @@
 NoNetReminder
 ==============
-Remind users When phones don't have network.<br>
+Remind users When phones don't have network. It's based on [Reachability](https://github.com/tonymillion/Reachability/edit/master/README.md)
 
 ![](https://github.com/Liqiankun/NoNetReminder/raw/master/NoNetReminderDemo/notNetReminderVideo.gif)
 
@@ -13,7 +13,7 @@ Features
 
 How to use
 ====================
-Darg `NoNetReminder` folder to your project. Then `import "NoNetReminder.h"`.<br>
+Darg `NoNetReminder` folder to your project. Then `import "NoNetReminder.h"`.<br> 
 
 #### ManualNoNetReminder
 
