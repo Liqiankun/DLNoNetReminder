@@ -15,24 +15,49 @@ How to use
 ====================
 Darg `NoNetReminder` folder to your project. Than `import "NoNetReminder.h"`.<br>
 
- ### ManualNoNetReminder
+#### ManualNoNetReminder
 
 ```oc
- self.remindView = [[NoNetRemindView alloc] initWithFrame:self.view.frame reloadBlock:^{
+- (void)viewDidLoad {
+    [super viewDidLoad
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake((self.view.frame.size.width - 100) /2  , 100,100 , 40)];
+    [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"点击" forState:UIControlStateNormal];
+    [button setBackgroundColor:[UIColor blueColor]];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.view addSubview:button];
+ 
+    self.view.backgroundColor = [UIColor whiteColor];
 
+    self.remindView = [[NoNetRemindView alloc] initWithFrame:self.view.frame reloadBlock:^{
         [_remindView dismiss];
-  }];
-  
-  //Costom Property
-  self.remindView.remindImage = [UIImage imageNamed:@"no-wifi"];
+    }];
+    //Costomize property
+    self.remindView.remindImage = [UIImage imageNamed:@"no-wifi"];
+
+}
+-(void)buttonAction:(UIButton*)button
+{
+    [_remindView showInView:self.view];
+}
 ```
 
- ### AutomaticNoNetReminder
+#### AutomaticNoNetReminder
 
 ```oc
-self.view.backgroundColor = [UIColor whiteColor];
-self.remindView = [[NoNetRemindView alloc] initWithFrame:self.view.frame showInView:self.view];
-self.remindView.delegate = self;
+- (void)viewDidLoad {
+    [super viewDidLoad];
+  
+    self.view.backgroundColor = [UIColor whiteColor];
+     self.remindView = [[NoNetRemindView alloc] initWithFrame:self.view.frame showInView:self.view];
+    self.remindView.delegate = self;
+}
+-(void)noNetRemindView:(NoNetRemindView *)noNetRemindView isInternetReachable:(NoNetRemindViewInternetState)InternetState
+{
+    //Do something here
+}
+
 ```
 Delegate
 ==============================
