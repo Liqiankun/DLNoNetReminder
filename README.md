@@ -11,11 +11,11 @@ Features
 - [x] Listen the internet state
 - [x] Customize appearance
 
- How to use
+How to use
 ====================
 Darg `NoNetReminder` folder to your project. Than `import "NoNetReminder.h"`.<br>
 
-### ManualNoNetReminder
+ ### ManualNoNetReminder
 
 ```oc
  self.remindView = [[NoNetRemindView alloc] initWithFrame:self.view.frame reloadBlock:^{
@@ -27,7 +27,7 @@ Darg `NoNetReminder` folder to your project. Than `import "NoNetReminder.h"`.<br
   self.remindView.remindImage = [UIImage imageNamed:@"no-wifi"];
 ```
 
-### AutomaticNoNetReminder
+ ### AutomaticNoNetReminder
 
 ```oc
 self.view.backgroundColor = [UIColor whiteColor];
