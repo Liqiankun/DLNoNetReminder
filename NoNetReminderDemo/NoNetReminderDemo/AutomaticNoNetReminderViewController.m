@@ -18,7 +18,7 @@
 
 -(void)viewDidDisappear:(BOOL)animated
 {
-    [self.remindView stopNitifiter];
+    [self.remindView stopNotifier];
 }
 
 - (void)viewDidLoad {
