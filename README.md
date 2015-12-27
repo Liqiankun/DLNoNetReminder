@@ -46,25 +46,30 @@ Darg `NoNetReminder` folder to your project. Then `import "NoNetReminder.h"`.<br
 #### AutomaticNoNetReminder
 
 ```oc
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [self.remindView stopNitifiter];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
     self.view.backgroundColor = [UIColor whiteColor];
-     self.remindView = [[NoNetRemindView alloc] initWithFrame:self.view.frame showInView:self.view];
+    self.remindView = [[NoNetRemindView alloc] initWithFrame:self.view.frame showInView:self.view];
     self.remindView.delegate = self;
 }
 -(void)noNetRemindView:(NoNetRemindView *)noNetRemindView isInternetReachable:(NoNetRemindViewInternetState)InternetState
 {
-    //Do something here
-}
+    //Do something here.
+} 
+
 
 ```
 Delegate
 ==============================
-NoNetRemindViewDelegate called when you use AutomaticNoNetReminder. 
+NoNetRemindViewDelegate called when you use AutomaticNoNetReminder and the internet state changed. 
 ```oc
 /**
- * NoNetRemindViewDelegate在使用Automatic模式是会调用
+ * NoNetRemindViewDelegate在使用Automatic模式时网络状态改变会调用
  *
  *  @param noNetRemindView
  *  @param InternetState   网络状态
