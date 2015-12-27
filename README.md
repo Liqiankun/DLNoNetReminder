@@ -13,7 +13,7 @@ Features
 
 How to use
 ====================
-Darg `NoNetReminder` folder to your project. Than `import "NoNetReminder.h"`.<br>
+Darg `NoNetReminder` folder to your project. Then `import "NoNetReminder.h"`.<br>
 
 #### ManualNoNetReminder
 
