@@ -71,8 +71,32 @@ NoNetRemindViewDelegate called when you use AutomaticNoNetReminder.
  */
 -(void)noNetRemindView:(NoNetRemindView*)noNetRemindView isInternetReachable:(NoNetRemindViewInternetState)InternetState;
 ```
+Custom property
+======================
+The text of RemindLabel. Default is `请检查您的网络`.
+```oc
+/** 提醒文字 */
+@property(nonatomic,copy) NSString *remindString;
+```
+
+The image of remindImageView. Default is `wireless`.
+```oc
+/** 提示图片  */
+@property(nonatomic,strong) UIImage *remindImage;
+```
+
+The text of reloadButton. Default is `重新加载`.
+```oc
+/** 按钮的title */
+@property(nonatomic,copy) NSString *buttonString;
+```
 Requirements
 ==================
 
 - Xcode 7.0 or greater
 - iOS8.0(manually only) or greater
+
+Author
+===============
+
+David Lee, qianlunli@yahoo.com
