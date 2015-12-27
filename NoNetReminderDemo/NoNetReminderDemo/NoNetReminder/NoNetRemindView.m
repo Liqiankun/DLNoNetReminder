@@ -114,7 +114,7 @@ static CGFloat reloadButtonHeight = 30;
    
 }
 
--(void)stopNitifiter
+-(void)stopNitifier
 {
     [self.reach stopNotifier];
 }
