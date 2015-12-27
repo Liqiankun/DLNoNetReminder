@@ -73,7 +73,7 @@ NoNetRemindViewDelegate called when you use AutomaticNoNetReminder.
 ```
 Custom property
 ======================
-The text of RemindLabel. Default is `请检查您的网络`.
+The text of remindLabel. Default is `请检查您的网络`.
 ```oc
 /** 提醒文字 */
 @property(nonatomic,copy) NSString *remindString;
