@@ -1,5 +1,7 @@
 ![](https://github.com/Liqiankun/NoNetReminder/raw/master/NoNetReminderDemo/noNetReminder.png)
-Remind users When phones don't have network. It's based on [Reachability](https://github.com/tonymillion/Reachability/edit/master/README.md)
+Remind users When phones don't have network. It's based on [Reachability](https://github.com/tonymillion/Reachability/edit/master/README.md)<br>
+当用户的设备没有网络是提醒用户。这个类是依赖于[Reachability](https://github.com/tonymillion/Reachability/edit/master/README.md)<br>
+
 
 ![](https://github.com/Liqiankun/NoNetReminder/raw/master/NoNetReminderDemo/notNetReminderVideo.gif)
 
@@ -10,11 +12,16 @@ Features
 - [x] Listen the internet state
 - [x] Customize appearance
 
+- [x] 使用简单
+- [x] 可以根据网络状态自动显示
+- [x] 可以监听网络状态
+- [x] 自定义显示效果
+
 How to use
 ====================
 Darg `NoNetReminder` folder to your project. Then `import "NoNetReminder.h"`. If your project already had Reahability,delete `Reachability` folder first.<br> 
-
-#### ManualNoNetReminder
+把 `NoNetReminder`文件夹添加到你的项目里边，然后`import "NoNetReminder.h"`。如果你的项目已经有了Reachability，可以把`Reachability`文件夹删除。<br>
+#### ManualNoNetReminder(手动模式)
 
 ```oc
 - (void)viewDidLoad {
@@ -42,7 +49,7 @@ Darg `NoNetReminder` folder to your project. Then `import "NoNetReminder.h"`. If
 }
 ```
 
-#### AutomaticNoNetReminder
+#### AutomaticNoNetReminder（自动模式）
 
 ```oc
 -(void)viewDidDisappear:(BOOL)animated
@@ -65,7 +72,8 @@ Darg `NoNetReminder` folder to your project. Then `import "NoNetReminder.h"`. If
 ```
 Delegate
 ==============================
-NoNetRemindViewDelegate called when you use AutomaticNoNetReminder and the internet state changed. 
+NoNetRemindViewDelegate called when you use AutomaticNoNetReminder and the internet state changed. <br>
+NoNetRemindViewDelegate会在使用AutomaticNoNetReminder且网络发生变化时调用。<br>
 ```oc
 /**
  * NoNetRemindViewDelegate在使用Automatic模式时网络状态改变会调用
