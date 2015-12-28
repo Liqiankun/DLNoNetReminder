@@ -12,7 +12,7 @@ Features
 
 How to use
 ====================
-Darg `NoNetReminder` folder to your project. Then `import "NoNetReminder.h"`. If your project allready had Reahability,delete `Reachability` folder first.<br> 
+Darg `NoNetReminder` folder to your project. Then `import "NoNetReminder.h"`. If your project already had Reahability,delete `Reachability` folder first.<br> 
 
 #### ManualNoNetReminder
 
