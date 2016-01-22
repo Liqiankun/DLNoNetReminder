@@ -10,7 +10,7 @@ Features
 - [x] Easy to use
 - [x] Be showed automatically
 - [x] Listen the internet state
-- [x] Customize appearance
+- [x] Customise appearance
 - [x] 使用简单
 - [x] 可以根据网络状态自动显示
 - [x] 可以监听网络状态
