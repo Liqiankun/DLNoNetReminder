@@ -1,6 +1,6 @@
 ![](https://github.com/Liqiankun/NoNetReminder/raw/master/NoNetReminderDemo/noNetReminder.png)
-Remind users When phones don't have network. It's based on [Reachability](https://github.com/tonymillion/Reachability/edit/master/README.md)<br>
-当用户的设备没有网络是提醒用户。这个类是依赖于[Reachability](https://github.com/tonymillion/Reachability/edit/master/README.md)<br>
+Remind users When phones don't have network. It's based on [Reachability](https://github.com/tonymillion/Reachability)<br>
+当用户的设备没有网络是提醒用户。这个类是依赖于[Reachability](https://github.com/tonymillion/Reachability)<br>
 
 
 ![](https://github.com/Liqiankun/NoNetReminder/raw/master/NoNetReminderDemo/notNetReminderVideo.gif)
